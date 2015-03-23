@@ -5,6 +5,8 @@
  * impliment the INI parser from the book using the given information.
  */
 
+
+//function straight from book. no modifications
 function parseINI(string) {
 	  //Start with an object to hold the top-level fields
 	var currentSection = {name: null, fields: []};
@@ -29,6 +31,7 @@ function parseINI(string) {
 
 }
 
+//text the book gave to parse out
 var enemy = ("searchengine=http://www.google.com/search?q=$1\n"+
 		"spitefulness=9.7\n"+
 
@@ -43,8 +46,11 @@ var enemy = ("searchengine=http://www.google.com/search?q=$1\n"+
 		"fullname=Gargamel\n"+
 		"type=evil sorcerer\n"+
 		"outputdir=/home/marijn/enemies/gargamel");
+
+//display what i am going to parse
 print(enemy);
 
+//the final parsed product
 print(JSON.stringify(parseINI(enemy)));
 
 
